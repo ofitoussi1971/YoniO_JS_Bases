@@ -78,7 +78,7 @@ function extract_from_string(string){
   let data
   for(i = 0; i < l; i += 3){ 
     data = string.substr(i,3)
-    // console.log(data + " => " + check_data(data))
+ 
     arr[j] = check_data(data) 
     j ++
   }
