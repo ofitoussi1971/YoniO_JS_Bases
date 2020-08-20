@@ -1,3 +1,14 @@
+/* Réalise un script script_5.js qui affichera dans la console les questions suivantes et leurs réponses :
+
+Est-ce que tous les livres ont été au moins empruntés une fois ?
+Quel est livre le plus emprunté ?
+Quel est le livre le moins emprunté ?
+Trouve le livre avec l'ID: 873495 ;
+Supprime le livre avec l'ID: 133712 ;
+Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).
+*/
+
+
 const books = [
   { title: "Gatsby le magnifique", id: 133712, rented: 39 },
   { title: "A la recherche du temps,perdu", id: 237634, rented: 28 },
@@ -61,7 +72,6 @@ for (let i = 0; i < books.length; i++) {
 console.log("Voici l'array 'books' sans l'ID demandé :", books);
 
 // Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).
-books.sort(function(a, b) {
-  return b.title - a.title;
-});
-console.log(books); // Marche pô !!!
+
+booksNow = books.filter(book => book.id !== 133712)
+console.log(booksNow.sort((a,z) => (a.title > z.title)));
