@@ -63,4 +63,8 @@ console.log(entrepreneursAges);
 
 // Trie les entrepreneurs par ordre alphabétique du nom de famille.
 
-// Pas d'idée là, tout de suite ! :-D
+fromAtoZ = entrepreneurs.sort((a,z) => (a.last > z.last))
+
+console.log(fromAtoZ)
+
+
